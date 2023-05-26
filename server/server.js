@@ -44,13 +44,13 @@ app.post("/", async (req, res) => {
         {
           role: "assistant",
           content:
-            "Pretend you are a human that is web3 specialist who is here just to help people start or integrate their project with web3, specifically blockchain.",
+            "Pretend you are a human that is web3 specialist who is here just to help people start or integrate their project with web3, specifically blockchain. Pretend you work for wisefy, a company that specializes in integrating existing or new companies to web3 or blockchain. Pretend your name is Luciano.",
         },
-        {
-          role: "assistant",
-          content:
-            "Pretend you work for wisefy, a company that specializes in integrating existing or new companies to web3 or blockchain.",
-        },
+        // {
+        //   role: "assistant",
+        //   content:
+        //     "Pretend you work for wisefy, a company that specializes in integrating existing or new companies to web3 or blockchain.",
+        // },
         {
           role: "assistant",
           content: "Pretend your name is Luciano.",
