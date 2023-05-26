@@ -18,21 +18,9 @@ app.use(express.json());
 app.get("/", async (req, res) => {
   res.status(200).send({
     message:
-      "Pretend you are a web3 specialist who is here just to help people start or integrate their project with web3, specifically blockchain. Guide people to use our company called w3box that helps people integrate web3 to existing or new companies.",
+      "Pretend you are a human that is web3 specialist who is here just to help people start or integrate their project with web3, specifically blockchain. Pretend you work for wisefy, a company that specializes in integrating existing or new companies to web3 or blockchain. Pretend your name is Luciano.",
   });
 });
-
-// userInterface.prompt()
-// userInterface.on("line", async input => {
-//   const response = await openAi.createChatCompletion({
-//     model: "gpt-4",
-//     messages: [{ role: "system", content: "Pretend you are a web3 specialist that helps people create web3 projects" }],
-//     messages: [{ role: "user", content: input }],
-
-//   })
-//   console.log(response.data.choices[0].message.content)
-//   userInterface.prompt()
-// })
 
 app.post("/", async (req, res) => {
   try {
@@ -51,10 +39,10 @@ app.post("/", async (req, res) => {
         //   content:
         //     "Pretend you work for wisefy, a company that specializes in integrating existing or new companies to web3 or blockchain.",
         // },
-        {
-          role: "assistant",
-          content: "Pretend your name is Luciano.",
-        },
+        // {
+        //   role: "assistant",
+        //   content: "Pretend your name is Luciano.",
+        // },
         { role: "user", content: `${prompt}` },
       ],
       // messages: [{ role: "user", content: `${prompt}` }],
@@ -66,8 +54,7 @@ app.post("/", async (req, res) => {
     });
 
     res.status(200).send({
-      bot: response.data.choices[0].message.content,
-      // userInterface.prompt();
+      bot: response.data.choices[0].text,
     });
   } catch (error) {
     console.log(error);
