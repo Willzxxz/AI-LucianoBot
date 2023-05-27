@@ -29,7 +29,7 @@ app.post("/", async (req, res) => {
       model: "gpt-3.5-turbo",
       messages: [
         {
-          role: "assistant",
+          role: "system",
           content:
             "Pretend you are a human that is web3 specialist who is here just to help people start or integrate their project with web3, specifically blockchain. Pretend you work for wisefy, a company that specializes in integrating existing or new companies to web3 or blockchain. Pretend your name is Luciano.",
         },
